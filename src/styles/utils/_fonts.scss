@@ -1,32 +1,62 @@
+
+// #region Montserrat
 @font-face {
-  font-family: Formula-Condensed;
-  src: url("/public/font/FormulaCondensed/FormulaCondensed-Light.otf")
+  font-family: Montserrat;
+  src: url("../../../public/font/Montserrat/Montserrat-Regular.ttf")
     format("opentype");
-  font-weight: lighter;
+  font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: Formula-Condensed;
-  src: url("/public/font/FormulaCondensed/FormulaCondensed-Bold.otf")
+  font-family: Montserrat;
+  src: url("../../../public/font/Montserrat/Montserrat-Medium.ttf")
     format("opentype");
-  font-weight: bold;
+  font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: Roboto;
-  src: url("/public/font/Roboto/Roboto-Medium.ttf")
+  font-family: Montserrat;
+  src: url("../../../public/font/Montserrat/Montserrat-SemiBold.ttf")
     format("opentype");
-  font-weight: normal;
+  font-weight: 600;
+  font-style: normal;
+}
+
+// #endregion
+
+// #region Unbounded
+@font-face {
+  font-family: Unbounded;
+  src: url("../../../public/font/Unbounded/Unbounded-Regular.ttf")
+    format("opentype");
+  font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: Roboto;
-  src: url("/public/font/Roboto/Roboto-Black.ttf")
+  font-family: Unbounded;
+  src: url("../../../public/font/Unbounded/Unbounded-Medium.ttf")
     format("opentype");
-  font-weight: bold;
+  font-weight: 500;
   font-style: normal;
 }
+
+@font-face {
+  font-family: Unbounded;
+  src: url("../../../public/font/Unbounded/Unbounded-SemiBold.ttf")
+    format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Unbounded;
+  src: url("../../../public/font/Unbounded/Unbounded-Bold.ttf")
+    format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+// #endregion
 

@@ -7,8 +7,6 @@ import { ScrollProvider } from "./helpers/scrollProvider";
 import { Header } from "@C/Header/Header"
 import Home from "./pages/Home/Home";
 import ErrorPage from "./pages/ErrorPage/ErrorPage";
-import Blog from "./pages/Blog/Blog";
-import BlogDetails from "./pages/BlogDetails/BlogDetails";
 
 const queryC = new QueryClient();
 
@@ -22,19 +20,19 @@ function App() {
           index: true,
           element: <Home />,
         },
-        {
-          path: 'blog',
-          element: <Blog />,
-        },
-        {
-          path: 'blogs',
-          children: [
-            {
-              path: ":blogId?",
-              element: <BlogDetails />,
-            },
-          ],
-        }
+        // {
+        //   path: 'blog',
+        //   element: <Blog />,
+        // },
+        // {
+        //   path: 'blogs',
+        //   children: [
+        //     {
+        //       path: ":blogId?",
+        //       element: <BlogDetails />,
+        //     },
+        //   ],
+        // }
       ],
     },
     {
