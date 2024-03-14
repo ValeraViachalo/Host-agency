@@ -1,5 +1,4 @@
 import React from "react";
-import { Logo } from "../Logo/Logo";
 import linksList from "@/data/links.json";
 
 import "./Header.scss";
@@ -10,7 +9,6 @@ import { Link } from "react-router-dom";
 export const Header = () => {
   return (
     <header className="header">
-      <Logo className="header__logo" />
 
       <div className="header__wrapper">
         <ul className="header__list-links">

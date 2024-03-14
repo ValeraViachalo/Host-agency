@@ -7,6 +7,8 @@ import { ScrollProvider } from "./helpers/scrollProvider";
 import { Header } from "@C/Header/Header"
 import Home from "./pages/Home/Home";
 import ErrorPage from "./pages/ErrorPage/ErrorPage";
+import Contact from "./pages/Contact/Contact";
+import { Avatar } from "./components/Avatar/Avatar";
 
 const queryC = new QueryClient();
 
@@ -20,19 +22,10 @@ function App() {
           index: true,
           element: <Home />,
         },
-        // {
-        //   path: 'blog',
-        //   element: <Blog />,
-        // },
-        // {
-        //   path: 'blogs',
-        //   children: [
-        //     {
-        //       path: ":blogId?",
-        //       element: <BlogDetails />,
-        //     },
-        //   ],
-        // }
+        {
+          path: 'contact',
+          element: <Contact />,
+        },
       ],
     },
     {
@@ -47,7 +40,8 @@ function App() {
     <QueryClientProvider client={queryC}>
       <main>
         <ScrollProvider>
-          <Header />
+          <Avatar />
+          {/* <Header /> */}
           
           <AnimatePresence mode="wait" initial={false}>
               {React.cloneElement(element, { key: location.pathname })}
