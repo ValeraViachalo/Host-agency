@@ -1,0 +1,40 @@
+.formsent {
+  display: none;
+  max-width: 600px;
+  margin: 10vw auto;
+  padding: 2vw;
+  border: 1px solid #ccc;
+  border-radius: 1vw;
+
+  .form-text {
+    display: block;
+    margin-bottom: 5vw;
+
+    input[type="text"],
+    input[type="tel"],
+    textarea {
+      width: 100%;
+      border: 1px solid #ccc;
+    }
+  }
+
+  .error-message {
+    color: red;
+    margin-top: 1vw;
+  }
+
+  .form-button {
+    display: block;
+    width: 100%;
+    padding: 5vw;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 1vw;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+}
