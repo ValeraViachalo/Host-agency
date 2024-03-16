@@ -1,7 +1,14 @@
 @import '/src/styles/global.scss';
 
-.home{
-  h1 {
-    margin-bottom: calc($gap * 8);
+.home {
+  &__content  {
+    display: flex;
+    flex-direction: column;
+    gap: calc($gap * 8);
+
+    margin-top: 50lvh;
+
+                // todo DELETE
+                margin-bottom: 50lvh;
   }
 }

@@ -1,0 +1,15 @@
+@import '/src/styles/global.scss';
+
+.hero {
+  margin-top: 16vw;
+
+  .title {
+    .secondary {
+      font-weight: 400;
+    }
+  }
+
+  .subtitle {
+    width: 60%;
+  } 
+}

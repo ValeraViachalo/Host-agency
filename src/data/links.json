@@ -1,23 +1,20 @@
 [
   {
-    "name": "Home",
+    "name": "Послуги",
     "link": "/",
-    "isAnchor": false
+    "isAnchor": true,
+    "page": "/"
   },
   {
-    "name": "Clement",
+    "name": "Команда",
     "link": "#clement",
     "isAnchor": true,
     "page": "/"
   },
   {
-    "name": "FAQ",
-    "link": "/faq",
-    "isAnchor": false
-  },
-  {
-    "name": "Medium",
-    "link": "blog",
-    "isAnchor": false
+    "name": "Кейси",
+    "link": "#clement",
+    "isAnchor": true,
+    "page": "/"
   }
 ]

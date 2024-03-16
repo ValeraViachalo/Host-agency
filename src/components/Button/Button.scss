@@ -1,0 +1,58 @@
+@import '/src/styles/global.scss';
+
+.button {
+  display: flex;
+  gap: 1vw;
+  padding: 1vw;
+
+  background-color: $c-blue;
+  color: $c-white;
+  border-radius: 0.5vw;
+
+  overflow: hidden;
+
+  .text {
+    &__wrapper {     
+      display: flex;
+      flex-direction: column;
+      gap: 1vw;
+      height: 1.5vw;
+      transform: translateY(-12%);
+      transition: transform $transition;
+    }  
+  }
+
+  .arrow {
+    min-width: 1vw;
+    min-height: 1vw;
+    transition: transform $transition;
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2vw;
+      height: 1.1vw;
+      transform: translateY(30%);
+    }
+
+    &:nth-of-type(2) {
+      transform: translateX(-200%);
+    }
+  }
+
+  &:hover {
+    .text__wrapper {
+      transform: translateY(-195%);
+    }
+
+    .arrow {
+      &:nth-of-type(1) {
+        transform: translate(210%, -275%);
+      }
+
+      &:nth-of-type(2) {
+        transform: translate(0%, -220%);
+      }
+    }
+  }
+}

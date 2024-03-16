@@ -6,8 +6,6 @@ export const Avatar = () => {
   return (
     <div className="avatar">
       <svg
-        width="1211"
-        height="1186"
         viewBox="0 0 1211 1186"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

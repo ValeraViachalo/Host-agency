@@ -1,0 +1,31 @@
+@import '/src/styles/global.scss';
+
+.services {
+  &__subtitle {
+    width: 50%;
+  }
+
+  &__content {
+    @include grid();
+    position: relative;
+    margin-top: calc($gap * 4);
+  }
+
+  &__number {
+    display: flex;
+    align-items: flex-end;
+    position: sticky;
+    top: 50%;
+    font-weight: 600 !important;
+    grid-column: 2/5;
+    height: 9vw;
+    overflow: hidden;
+  }
+  
+  &__list {
+    grid-column: 5/13;
+    display: flex;
+    flex-direction: column;
+    gap: 25lvh;
+  }
+}

@@ -41,7 +41,7 @@ function App() {
       <main>
         <ScrollProvider>
           <Avatar />
-          {/* <Header /> */}
+          <Header />
           
           <AnimatePresence mode="wait" initial={false}>
               {React.cloneElement(element, { key: location.pathname })}

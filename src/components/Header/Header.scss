@@ -1,26 +1,22 @@
 @import "/src/styles/global.scss";
 
 .header {
-  align-items: center;
-  background-color: #8e8e8e2d;
-  backdrop-filter: blur(1vw);
   display: flex;
+  align-items: center;
   flex-direction: row;
-  height: 5vw;
   justify-content: space-between;
-  z-index: 10;
-  padding: 0 6.5vw;
+  z-index: 100;
+
+  background-color: $g--blured;
+  backdrop-filter: blur(1vw);
+  padding: 1vw 1.5vw;
+  border-radius: 0.8vw;
+
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-
-  @include forMobiles() {
-    height: 14vw;
-    justify-content: space-between;
-    padding: 0 6.3vw;
-  }
-
+  left: 50%;
+  bottom: 5vh;
+  transform: translateX(-50%);
+  
   &__wrapper {
     display: flex;
     align-items: center;
@@ -54,7 +50,6 @@
   }
 
   &__link {
-    font-size: 1.2vw;
     padding: 0.5vw 0.7vw;
     position: relative;
     z-index: 1;

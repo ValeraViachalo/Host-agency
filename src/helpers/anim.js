@@ -38,6 +38,44 @@ export const Menu = {
   }
 };
 
+export const servicesAnim = {
+  numbers: {
+    initial: {
+      transform: "translateY(120%)",
+      transition: {
+        duration: 0.3,
+        easing: [0.28, 0.02, 0, 1.02],
+      },
+    },
+    animate: {
+      transform: "translateY(0%)",
+      transition: {
+        duration: 0.3,
+        delay: 0.1,
+        easing: [0.28, 0.02, 0, 1.02],
+      },
+    },
+    exit: {
+      transform: "translateY(-150%)",
+      transition: {
+        duration: 0.4,
+        easing: [0.28, 0.02, 0, 1.02],
+      },
+    },
+  },
+  text: {
+    initial: {
+      filter: "blur(3vw)",
+    },
+    animate: {
+      filter: "blur(0vw)",
+    },
+    exit: {
+      filter: "blur(3vw)",
+    },
+  }
+}
+
 export const blogAnim = {
   Presence: {
     initial: {

@@ -11,8 +11,8 @@ body {
 }
 
 ::selection {
-  color: #5f00f9;
-  background: #6929ff1b;
+  color: $c-blue;
+  background-color: $c-white;
   mix-blend-mode: difference;
 }
 
@@ -22,4 +22,12 @@ body {
 
 .container {
   padding: 0 4vw;
+}
+
+.hightlighed {
+  color: $c-white;
+  background-color: $c-blue;
+  padding: 0.3vw 1.5vw;
+  border-radius: 1vw;
+  width: min-content;
 }

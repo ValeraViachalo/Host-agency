@@ -17,7 +17,7 @@
   font-family: Unbounded, sans-serif;
   font-size: 8.9vw;
   font-weight: 400;
-  line-height: 120%;
+  line-height: 80%;
   text-transform: uppercase;
   letter-spacing: -0.04em;
 
@@ -109,7 +109,6 @@ h3 {
 
 h4 {
   @extend %h4;
-
 }
 
 .medium {

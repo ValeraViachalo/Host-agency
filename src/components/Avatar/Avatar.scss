@@ -1,8 +1,11 @@
 @import '/src/styles/global.scss';
 
 .avatar {
-  position: absolute;
-  right: -35%;
-  top: -10%;
+  position: fixed;
+  right: -19%;
+  top: -1%;
   z-index: -100;
+
+  width: 59.2vw;
+  height: 57.9vw;
 }

@@ -1,0 +1,24 @@
+@import '/src/styles/global.scss';
+
+.reason {
+  &__content {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    margin-top: calc($gap * 2);
+
+    h4 {
+      width: 50%;
+
+      .hightlighed {
+        padding: 0.5% 2%;
+      }
+    }
+  }
+
+  &__image {
+    border-radius: 1vw;
+    width: 29.3vw;
+    height: 20.9vw;
+  }
+}
