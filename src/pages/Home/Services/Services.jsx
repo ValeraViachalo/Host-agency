@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import servicesList from "@/data/services.json";
 
 import "./Services.scss";
@@ -7,6 +7,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { motion, AnimatePresence } from "framer-motion";
 import { servicesAnim } from "@/helpers/anim";
+import { ScrollContext } from "@/helpers/scrollContext";
 
 export default function Services() {
   const [currentNum, setCurrentNum] = useState(1);
@@ -21,18 +22,21 @@ export default function Services() {
 
       <div className="services__content">
         <h1 className="big-text services__number">
-            <span>0</span>
-          <AnimatePresence mode="popLayout" presenceAffectsLayout>
-            <motion.span
-              key={currentNum}
-              variants={servicesAnim.numbers}
-              initial="initial"
-              animate="animate"
-              exit="exit"
-            >
-              {currentNum}
-            </motion.span>
-          </AnimatePresence>
+          <span>0</span>
+          <motion.span
+            className="services__number-slider"
+            variants={servicesAnim(currentNum).numbers}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+          >
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>5</span>
+            <span>6</span>
+          </motion.span>
         </h1>
 
         <ul className="services__list">
@@ -43,6 +47,7 @@ export default function Services() {
                 title={currS.title}
                 description={currS.description}
                 id={i + 1}
+                currentNum={currentNum}
                 setCurrentNum={setCurrentNum}
               />
             ))}
@@ -53,23 +58,45 @@ export default function Services() {
   );
 }
 
-const ServicesItem = ({ title, description, id, setCurrentNum }) => {
+const ServicesItem = ({
+  title,
+  description,
+  id,
+  setCurrentNum,
+  currentNum,
+}) => {
   gsap.registerPlugin(ScrollTrigger);
+
+  const handleEnterService = () => {
+    setCurrentNum(id);
+  };
+
+  const handleLeaveBackService = () => {
+    let currId = id !== 1 ? id - 1 : 1;
+
+    setCurrentNum(currId);
+  };
 
   useGSAP(() => {
     ScrollTrigger.create({
       trigger: `#service-${id}`,
       start: "top center",
-      end: "top center",
-      onEnter: () => setCurrentNum(id),
-      onLeaveBack: () => setCurrentNum(id !== 1 ? id - 1 : 1),
+      end: "bottom center",
+      onEnter: () => handleEnterService(),
+      onLeaveBack: () => handleLeaveBackService(),
     });
   });
 
   return (
-    <ul id={`service-${id}`}>
+    <motion.ul
+      variants={servicesAnim().text}
+      initial="initial"
+      animate={currentNum === id ? "animate" : "exit"}
+      id={`service-${id}`}
+      className="services__list-item"
+    >
       <h1>{title}</h1>
       <h4 className="medium">{description}</h4>
-    </ul>
+    </motion.ul>
   );
 };

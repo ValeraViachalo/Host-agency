@@ -1,11 +1,13 @@
 import React from "react";
+
+import './Home.scss';
+
 import Hero from "./Hero/Hero";
 import Problems from "./Problems/Problems";
 import Reason from "./Reason/Reason";
-
-import './Home.scss';
 import HowWeWork from "./HowWeWork/HowWeWork";
 import Services from "./Services/Services";
+import CTA from "./СTA/СTA";
 
 export default function Home() {
 
@@ -17,6 +19,7 @@ export default function Home() {
       <Reason />
       <HowWeWork />
       <Services />
+      <CTA />
     </div>
   </main>
   );

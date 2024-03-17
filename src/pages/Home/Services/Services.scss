@@ -16,16 +16,33 @@
     align-items: flex-end;
     position: sticky;
     top: 50%;
+    transform: translateY(-50%);
     font-weight: 600 !important;
     grid-column: 2/5;
     height: 9vw;
     overflow: hidden;
+    margin-top: 5vw;
+
+    &-slider {
+      display: flex;
+      flex-direction: column;
+      gap: 2vw;
+      transform: translateY(86%);
+    }
   }
   
   &__list {
     grid-column: 5/13;
     display: flex;
     flex-direction: column;
-    gap: 25lvh;
+    gap: 15lvh;
+
+    &-item {
+      padding: 5vw 0;
+
+      &:nth-of-type(1) {
+        padding: 0 0 5vw;
+      }
+    }
   }
 }

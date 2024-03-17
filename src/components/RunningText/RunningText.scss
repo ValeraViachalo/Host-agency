@@ -1,0 +1,27 @@
+@import '/src/styles/global.scss';
+
+.running-text {
+  display: flex;
+  overflow: hidden;
+  color: $c-white;
+  padding: 0.2vw 0;
+
+  &--blue {
+    background-color: $c-blue;
+  }
+
+  &--black {
+    background-color: $c-black;
+  }
+
+  .slider {
+    display: flex;
+    gap: 1vw;
+  }
+
+  &__item {
+    text-wrap: nowrap;
+    @extend %h2;
+    font-weight: 400;
+  }
+}

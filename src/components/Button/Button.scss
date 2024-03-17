@@ -2,6 +2,7 @@
 
 .button {
   display: flex;
+  justify-content: center;
   gap: 1vw;
   padding: 1vw;
 
@@ -12,6 +13,8 @@
   overflow: hidden;
 
   .text {
+    text-wrap: nowrap;
+    
     &__wrapper {     
       display: flex;
       flex-direction: column;
